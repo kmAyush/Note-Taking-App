@@ -5,3 +5,9 @@
     <li><div>{{ note.text }}<br>{{note.created}}</div></li><br>
     {% endfor %}
 </ul>
+
+<form method="POST" action="">
+	{% csrf_token %} 
+	{{ form.as_p }}
+	<input type="submit" name="Submit">
+</form>
