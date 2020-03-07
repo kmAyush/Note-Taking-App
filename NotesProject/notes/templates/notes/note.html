@@ -1,0 +1,7 @@
+<h1>Note Taking App</h1>
+
+<ul>
+    {% for note in noteList %}
+    <li><div>{{ note.text }}<br>{{note.created}}</div></li><br>
+    {% endfor %}
+</ul>
