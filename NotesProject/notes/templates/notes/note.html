@@ -1,13 +1,27 @@
-<h1>Note Taking App</h1>
-
-<ul>
-    {% for note in noteList %}
-    <li><div>{{ note.text }}<br>{{note.created}}</div></li><br>
-    {% endfor %}
-</ul>
-
-<form method="POST" action="">
-	{% csrf_token %} 
-	{{ form.as_p }}
-	<input type="submit" name="Submit">
-</form>
+<!Doctype html>
+    <head>
+        {% load staticfiles %}
+        <link href="{% static 'notes/note.css'%}" rel="stylesheet" type="text/css">
+        <h1>Django Note Taking App</h1>
+    </head>
+    <body>
+    <div class="wrapper clearfix">
+        <ul>
+            {% for note in noteList %}
+                    <aside class="note-wrap note-yellow">
+                        <li><h3>{{ note.text }}</h3><br>
+                        {{ note.created }}</a></li><br>
+                    </aside>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr><h2>Create Note</h2>
+        <center>
+            <form method="POST" action="">
+                {% csrf_token %} 
+                {{ form.as_p }}
+                <input type="submit" name="Submit">
+            </form>
+        </center>
+    </body>
+</html>
