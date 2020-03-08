@@ -1,4 +1,4 @@
-# Polls App
+# Note Taking App
 Purpose - This project is created to demonstrate usage of django.
 It is app to create notes and show notes like the sticky notes in Windows.
 
