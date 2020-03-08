@@ -7,7 +7,7 @@ Current Status - Completed / Further improvement in UI is possible
 # Instruction to install - 
 Run these commands in terminal :-
 1. git clone https://github.com/kmAyush/Note-Taking-App
-2. cd Polls/NotesProject
+2. cd Note-Taking-App/NotesProject
 3. py manage.py makemigrations
 4. py manage.py migrate
 5. py manage.py runserver
