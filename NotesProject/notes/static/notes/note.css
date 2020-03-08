@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Englebert&display=swap');
 body {
     background: rgba(222,222,222,1);
-    background: url('https://i.imgur.com/2BdQt0g.jpg');
+    background: url("bkg.jpg");
     margin: 20px;
 }
 * {
