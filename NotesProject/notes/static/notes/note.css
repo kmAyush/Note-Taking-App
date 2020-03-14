@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Englebert&display=swap');
-body {
-    background: rgba(222,222,222,1);
-    background: url("bkg.jpg");
-    margin: 20px;
+@import url('https://fonts.googleapis.com/css?family=Englebert|Lobster&display=swap');
+.row{
+    background:#cfdfea;
+   	background-size: 120vw 150vh;
+   	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) inset;
+
 }
 * {
 	-webkit-box-sizing: border-box; 
@@ -40,12 +41,12 @@ body {
 
 /* Note styles */
 .note-wrap {
-	width: 235px;
-	min-height: 235px;
+	width: 14rem;
+	min-height: 14rem;
 	padding: 2rem; 
 	margin: 0 2rem 4rem 2rem;
 	position: relative;
-	font-size: 24px;
+	/*font-size: 24px;*/
 	vertical-align: top;
   display: inline-block;
 	font-family: Englebert, Arial;
@@ -54,36 +55,6 @@ body {
 	line-height: 34px; 
 	text-align: center;
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-	&:before  {
-		display: block;
-		content: ""; 
-		background: rgba(227, 200, 114, 0.40);
-		width: 130px;
-		height: 28px;
-	  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-	  border-radius: 6px/18px 0;
-		position: absolute;
-		top: -13px;
-		left: 50px;
-		-webkit-transform: rotate(-2deg);
-		-moz-transform: rotate(-2deg);
-		-o-transform: rotate(-2deg);
-		-ms-transform: rotate(-2deg);
-		transform: rotate(-2deg);
-	}
-	& a {
-		color:#6b824f;
-		text-decoration: none;
-		font-size: 20px; 
-		-webkit-transition: all 0.4s ease;
-		-moz-transition: all 0.4s ease;
-		-o-transition: all 0.4s ease;
-		-ms-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-		&:hover {
-			color:#D83A25;
-		}
-	}
 }
 
 .note-yellow {
@@ -112,9 +83,24 @@ body {
 }
 .note-green {
 	background: #CAF4B9;
-	-webkit-transform: rotate(-1deg);
-	-moz-transform: rotate(-1deg);
-	-o-transform: rotate(-1deg);
-	-ms-transform: rotate(-1deg);
-	transform: rotate(-1deg);
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+
+.uno:before{
+content: "";
+display: block;
+width: 100px;
+height: 30px;
+position: relative;
+top: 15px;
+z-index: 1;
+margin: auto;
+background: rgba(255,255,200,0.3);
+-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }

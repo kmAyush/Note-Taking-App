@@ -1,3 +1,4 @@
+{% load widget_tweaks %}
 <!Doctype html>
     <head>
         <!-- Import bootstrap and Jquery  -->
@@ -11,26 +12,30 @@
 
         {% load staticfiles %}
         <link href="{% static 'notes/note.css'%}" rel="stylesheet" type="text/css">
-        <h1>Django Note Taking App</h1>
+        <div class="mt-2 ml-3" style="font-family:'Lobster',cursive;"><h1>Note Taking App</h1></div>
     </head>
     <body>
-    <div class="container wrapper clearfix">
-        <ul>
-            {% for note in noteList %}
-                    <aside class="note-wrap note-yellow">
-                        <li><h3>{{ note.text }}</h3><br>
-                        {{ note.created }}</a></li><br>
-                    </aside>
-            {% endfor %}
-        </ul>
-    </div>
-    <hr><h2>Create Note</h2>
-        <center>
-            <form method="POST" action="">
-                {% csrf_token %} 
-                {{ form.as_p }}
-                <input type="submit" name="Submit">
-            </form>
-        </center>
+    <div class="row container-fluid p-0 m-0">
+
+        {% for note in noteList %}
+        <div class="col-sm-12 col-md-4 col-lg-3 wrapper clearfix uno">
+                <aside class="note-wrap note-green">
+                    <h4>{{ note.text }}</h4><br>
+                    <span class="text-muted">{{ note.created }}</span>
+                </aside>
+        </div>
+        {% endfor %}
+
+        <div class="col-sm-12 col-md-4 col-lg-3 wrapper clearfix uno">
+                <aside class="note-wrap note-green" style="border:1px #677558 solid;">
+                    <form method="POST" action="">
+                        {% csrf_token %} 
+                        <center> Add a note</center>
+                        {% render_field form.text class="form-control" placeholder="Enter text" style="max-height:150px;"%}
+                        <input class="btn btn-outline-primary mt-2" type="submit" name="Submit">
+                    </form>
+                </aside>
+        </div>
+
     </body>
 </html>
