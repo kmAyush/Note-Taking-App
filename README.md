@@ -13,9 +13,9 @@ Run these commands in terminal :-
 1. git clone https://github.com/kmAyush/Note-Taking-App
 2. cd Note-Taking-App/NotesProject
 3. pip3 install django-widget-tweaks
-4. py manage.py makemigrations
-5. py manage.py migrate
-6. py manage.py runserver
+4. python3 manage.py makemigrations
+5. python3 manage.py migrate
+6. python3 manage.py runserver
 7. Run 127.0.0.1:8000 on Web browser
 
 # Features
